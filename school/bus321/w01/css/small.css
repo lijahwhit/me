@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root {
+    --font1: 'Roboto Mono', monospace;
+}
+
+h1 {
+    text-align: center;
+    margin: 2%;
+    font-family: var(--font1);
+}
+
+#w01vid {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+};
