@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="icon" type="image/x-icon" href="images/volleyballIcon.ico">
+    <title>Volleyball Score Board</title>
+</head>
+<body>
+    
+    <img class="settingsIcon icon" src="images/settingsIcon.png" alt="settingsIcon" onclick="settingsToggle()">
+    
+    <img class="adjustmentBtnsIcon icon" src="images/adjustmentBtnsOff.png" alt="adjustmentBtnsIcon" onclick="adustmentBtnsToggle()">
+
+    <img class="notesIcon icon" src="images/notesIcon.png" alt="notesIcon" onclick='notesToggle()'>
+
+    <img class="resetIcon icon" src="images/resetIcon.png" alt="resetIcon" onclick="reset()">
+
+    <div class="blank" onclick="blank()"></div>
+
+    <img class="iconsBtnsToggle" src="images/whiteDot.png" alt="iconsBtnsToggle" onclick="iconsBtnsToggle()">
+         
+    <div class="leftScore card" onclick="leftScoreIncrease()" oncontextmenu="leftScoreDecrease()">
+        <p class="leftNumber"></p>
+    </div>
+
+    
+
+    <div class="rightScore card" onclick="rightScoreIncrease()" oncontextmenu="rightScoreDecrease()">
+        <p class="rightNumber"></p>
+    </div>
+
+    <div class="leftAdjustments">
+        <p class="leftPlus adbox" onclick="leftScoreIncrease()"> + </p>
+        <p class="leftMinus adbox" onclick="leftScoreDecrease()"> - </p>
+    </div>
+
+    <div class="rightAdjustments">
+        <p class="rightPlus adbox" onclick="rightScoreIncrease()"> + </p>
+        <p class="rightMinus adbox" onclick="rightScoreDecrease()"> - </p>
+    </div>
+
+    <div class="settingsView">
+        <div class="settingsContent">
+            <h2 onclick="settingsToggle()">X</h2>
+            <label for="backColor">Background Color</label>
+            <input type="color" id="backColor" value="#000000" onfocus="deApply()">
+            <!-- <label for="max">Max Count</label>
+            <input type="text" id="max" name="Max Count" placeholder="99" onfocus="deApply(), this.value=''" > -->
+            <input type="submit" value="Default" id="Default" onclick="preset()"></input> 
+            <input type="submit" value="Preset 1" id="preset1" onclick="preset(1)"></input>
+            <input type="submit" value="Preset 2" id="preset2" onclick="preset(2)"></input>
+            <input type="submit" value="Preset 3" id="preset3" onclick="preset(3)"></input>
+            <label for="max">Left Key Increase</label>
+            <input type="text" id="LIKey" name="Max Count" value="ArrowUp" onfocus="deApply(), this.value=''" >
+            <label for="max">Left Key Decrease</label>
+            <input type="text" id="LDKey" name="Max Count" value="ArrowDown" onfocus="deApply(), this.value=''" >
+            <label for="max">Right Key Increase</label>
+            <input type="text" id="RIKey" name="Max Count" value="ArrowRight" onfocus="deApply(), this.value=''" >
+            <label for="max">Left Key Decrease</label>
+            <input type="text" id="RDKey" name="Max Count" value="ArrowLeft" onfocus="deApply(), this.value=''" >
+            <input type="submit" value="Apply" id="applyBtn" onclick="apply()"></input>
+            <input type="submit" value="Reset" id="resetBtn" onclick="reset()"></input>
+        </div>
+    </div>
+    
+    <div class="notesView">
+        <div class="notesContent">
+            <h1>NOTES ON USAGE</h1>
+            <h6>General Increment: Left Click</h6>
+            <h6>General Decrement: Right Click</h6>
+            <h6>Go to SETTINGS to view and set custom keybindings </h6>
+
+            <h1></h1>
+        </div>
+
+    </div>
+
+</body>
+
+<footer>
+    <script src="js/main.js"></script>
+</footer>
+
+</html>

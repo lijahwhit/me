@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root {
+    --background: #000000;
+    --textColor: #FFFFFF;
+    --font: 'Roboto Mono', monospace;
+    --imgSize: 5vh;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 6vh 94vh;
+    background-color: var(--background);
+    align-self: center;
+    margin: 0;
+}
+
+.icon {
+    width: var(--imgSize);
+    height: var(--imgSize);
+}
+
+.settingsIcon {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: left;
+}
+
+.adjustmentBtnsIcon {
+    grid-column: 1/3;
+    grid-row: 1;
+    justify-self: center;
+}
+
+.adjustmentBtnsIconOn {
+    grid-column: 1/3;
+    grid-row: 1;
+    justify-self: center;
+}
+
+.notesIcon {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: right;
+}
+
+.iconsBtnsToggle {
+    width: 2vh;
+    grid-column: 1/3;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.resetIcon {
+    grid-column: 2;
+    grid-row: 1/4;
+    justify-self: center;
+    align-self: center;
+}
+
+.blank {
+    grid-column: 1/5;
+    grid-row: 2/5;
+}
+
+.leftScore {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.rightScore {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.leftAdjustments {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 6vw;
+    display: none;
+    color: var(--textColor);
+    text-align: center;
+}
+
+.rightAdjustments {
+    grid-column: 2;
+    grid-row: 3;
+    font-size: 6vw;
+    display: none;
+    color: var(--textColor);
+    text-align: center;
+}
+
+
+.adbox {
+    border-style: solid;
+    border-radius: 1vw;
+    border-color: var(--textColor);
+    width: 9vw;
+    height: 9vw;
+    padding: auto;
+    cursor: pointer;
+}
+
+img {
+    margin: 5px;
+    display: block;
+    padding: 3px;
+    width: var(--imgSize);
+    cursor: pointer;
+    -webkit-user-select: none;        
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+p {
+    font-family: var(--font);
+    justify-self: center;
+    align-self: center;
+    margin: auto;
+    padding: auto;
+    -webkit-user-select: none;        
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.settingsView {
+    width: 20%;
+    position: absolute;
+    display: grid;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.settingsContent {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9vw;
+    font-family: var(--font);
+    font-size: 15px;
+    color: black;
+}
+
+h1 {
+    margin: 5px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: -20px;
+    position: fixed;
+    margin: 0;
+    justify-self: right;
+    align-self: start;
+    cursor: pointer;
+}
+
+h6 {
+    margin: 1px;
+}
+
+.card {
+    margin-bottom: 20px;
+    justify-self: center;
+    align-self: center;
+    font-size: 35vw;
+    cursor: pointer;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    color: var(--textColor);
+}
+
+.off {
+    display: none;
+}
+
+.on {
+    display: flex;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font);
+}
+
+input[type=color] {
+    justify-self: left;
+}
+
+.bodySmall {
+    grid-template-rows: 5vh 75vh 20vh;
+}
+
+.notesView {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.notesContent {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 21vw;
+    gap: 0.9vw;
+    font-family: var(--font);
+    font-size: 1.1vw;
+    color: black;
+    text-align: center;
+}
