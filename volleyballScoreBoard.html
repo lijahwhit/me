@@ -4,30 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="HandheldFriendly" content="true">
-    <link rel="stylesheet" href="css/vballSmall.css">
-    <link rel="icon" type="image/x-icon" href="images/volleyballIcon.ico">
+    <link rel="stylesheet" href="volleyballFiles/css/small.css">
+    <link rel="icon" type="image/x-icon" href="volleyballFiles/images/volleyballIcon.ico">
     <title>Volleyball Score Board</title>
 </head>
 <body>
     
-    <img class="settingsIcon icon" src="images/settingsIcon.png" alt="settingsIcon" onclick="settingsToggle()">
+    <img class="settingsIcon icon" src="volleyballFiles/images/settingsIcon.png" alt="settingsIcon" onclick="settingsToggle()">
     
-    <img class="adjustmentBtnsIcon icon" src="images/adjustmentBtnsOff.png" alt="adjustmentBtnsIcon" onclick="adustmentBtnsToggle()">
+    <img class="adjustmentBtnsIcon icon" src="volleyballFiles/images/adjustmentBtnsOff.png" alt="adjustmentBtnsIcon" onclick="adustmentBtnsToggle()">
 
-    <img class="notesIcon icon" src="images/notesIcon.png" alt="notesIcon" onclick='notesToggle()'>
+    <img class="notesIcon icon" src="volleyballFiles/images/notesIcon.png" alt="notesIcon" onclick='notesToggle()'>
 
-    <img class="resetIcon icon" src="images/resetIcon.png" alt="resetIcon" onclick="reset()">
+    <img class="resetIcon icon" src="volleyballFiles/images/resetIcon.png" alt="resetIcon" onclick="reset()">
 
     <div class="blank" onclick="blank()"></div>
 
-    <img class="iconsBtnsToggle" src="images/whiteDot.png" alt="iconsBtnsToggle" onclick="iconsBtnsToggle()">
+    <img class="iconsBtnsToggle" src="volleyballFiles/images/whiteDot.png" alt="iconsBtnsToggle" onclick="iconsBtnsToggle()">
          
     <div class="leftScore card" onclick="leftScoreIncrease()" oncontextmenu="leftScoreDecrease()">
         <p class="leftNumber"></p>
     </div>
-
-    
-
+ 
     <div class="rightScore card" onclick="rightScoreIncrease()" oncontextmenu="rightScoreDecrease()">
         <p class="rightNumber"></p>
     </div>
@@ -81,7 +79,7 @@
 </body>
 
 <footer>
-    <script src="js/vballMain.js"></script>
+    <script src="volleyballFiles/js/Main.js"></script>
 </footer>
 
 </html>
