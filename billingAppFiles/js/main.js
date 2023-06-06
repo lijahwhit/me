@@ -9,6 +9,8 @@ document.getElementById("input5").value = getSavedValue("input5");
 document.getElementById("input6").value = getSavedValue("input6");
 document.getElementById("input7").value = getSavedValue("input7");
 document.getElementById("input7").value = getSavedValue("input8");
+document.getElementById("input7").value = getSavedValue("input9");
+document.getElementById("input7").value = getSavedValue("input10");
 getCcpf();
 /* Here you can add more inputs to set value. if it's saved */
 

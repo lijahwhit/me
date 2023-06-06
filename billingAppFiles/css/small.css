@@ -23,7 +23,7 @@ body {
 .description {
     display: grid;
     grid-template-columns: 48% 4% 48%;
-    grid-template-rows: repeat(8, 6vh);
+    grid-template-rows: repeat(10, 6vh);
     gap: 2vh 0px;
     align-self: center;
     margin: 2vh;
