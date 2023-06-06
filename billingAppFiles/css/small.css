@@ -10,6 +10,7 @@ body {
     background-color: var(--background);
     display: grid;
     grid-template-columns: 100%;
+    margin: 2vh;
 }
 
 .ccpf {
@@ -17,7 +18,6 @@ body {
     grid-template-columns: 24% 24% 4% 24% 24%;
     grid-template-rows: 6vh;
     align-self: center;
-    margin: 2vh 2vh 0px 2vh;
 }
 
 .description {
@@ -26,7 +26,7 @@ body {
     grid-template-rows: repeat(10, 6vh);
     gap: 2vh 0px;
     align-self: center;
-    margin: 2vh;
+    margin: 2vh 0px;
 }
 
 input, button {
@@ -41,4 +41,8 @@ input, button {
     color: #FFFFFF;
     font-size: 150%;
     text-align: center;
+}
+
+#preset1 {
+    cursor: pointer;
 }
