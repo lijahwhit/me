@@ -87,7 +87,7 @@ function preset(number) {
     var input8 = document.getElementById("input8")
     input8.value = "While processing your credit card for auto billing this month, your card did not go through. On the 6th of each month, late charges are applied. Please contact us with a card with sufficient funds or let us know when the card on your paper credit card authorization form can be charged. ";
     var input9 = document.getElementById("input9")
-    input9.value = "";
+    input9.value = "June Storage";
     var input10 = document.getElementById("input10")
     input10.value = "";
   }
