@@ -38,8 +38,6 @@ function getCcpf() {
   var ccpf = document.getElementById("input0");
   var e = parseInt(electric)
   var p = parseInt(propane)
-  console.log("Electric: " + electric)
-  console.log("Propane: " + propane)
   if (electric === "" && propane === "") {
     ccpf.value = "0.00"
   } else if (propane === "") {
@@ -65,3 +63,9 @@ function copyText(number) {
   
   }
 
+function clearEP() {  
+  var electric = document.getElementById("electric");
+  var propane = document.getElementById("propane");
+  electric.value = "";
+  propane.value = "";
+}
