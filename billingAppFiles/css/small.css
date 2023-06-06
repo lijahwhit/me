@@ -9,51 +9,30 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 6vh 94vh;
+    grid-template-columns: 1fr 1fr 50px 1fr 1fr;
+    grid-template-rows: repeat(8, 6vh);
+    gap: 35px 0px;
     background-color: var(--background);
     align-self: center;
-    margin: 0;
+    margin: 5%;
 }
 
-img {
-    margin: 5px;
-    display: block;
-    padding: 3px;
-    width: var(--imgSize);
-    cursor: pointer;
-    -webkit-user-select: none;        
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+input {
+    font-size: 150%;
 }
 
-p {
-    font-family: var(--font);
-    justify-self: center;
-    align-self: center;
-    margin: auto;
-    padding: auto;
-    -webkit-user-select: none;        
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+button {
+    font-size: 150%;
 }
 
-h1 {
-    margin: 5px;
+#input0 {
+    background-color: #000000;
+    border-color: #000000;
+    color: #FFFFFF;
+    font-size: 150%;
+    text-align: center;
 }
 
-h2 {
-    font-size: 20px;
-    margin-top: -20px;
-    position: fixed;
-    margin: 0;
-    justify-self: right;
-    align-self: start;
-    cursor: pointer;
-}
-
-h6 {
-    margin: 1px;
+#electric, #propane, #input0, #button0 {
+    font-size: 200%;
 }

@@ -4,16 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="HandheldFriendly" content="true">
-    <link rel="stylesheet" href="billingApp/css/small.css">
-    <link rel="icon" type="image/x-icon" href="billing/images/billingAppIcon.ico">
+    <link rel="stylesheet" href="billingAppFiles/css/small.css">
+    <link rel="icon" type="image/x-icon" href="billingAppFiles/images/billingAppIcon.ico">
     <title>Billing App</title>
 </head>
 <body>
-  
+    <input type="text" value="" id="electric" placeholder="Electric" onkeyup='saveValue(this);' onfocus="this.value='', getCcpf(), saveValue(this);">
+    <input type="text" value="" id="propane" placeholder="Propane" onkeyup='saveValue(this);' onfocus="this.value='', getCcpf(), saveValue(this);">
+
+    <div></div>
+
+    <input type="text" value="" id="input0" readonly></input>
+    <button id="button0" onclick="copyText(0)">Copy CCPF Total</button>
+
+    <input type="text" value="" id="input1" onkeyup='saveValue(this);'>
+    <button id="button1" onclick="copyText(1)">Copy Text</button>
+
+    <div></div>
+
+    <input type="text" value="" id="input2" onkeyup='saveValue(this);'>
+    <button id="button2" onclick="copyText(2)">Copy Text</button>
+
+    <input type="text" value="" id="input3" onkeyup='saveValue(this);'>
+    <button id="button3" onclick="copyText(3)">Copy Text</button>
+
+    <div></div>
+
+    <input type="text" value="" id="input4" onkeyup='saveValue(this);'>
+    <button id="button4" onclick="copyText(4)">Copy Text</button>
+
+    <input type="text" value="" id="input5" onkeyup='saveValue(this);'>
+    <button id="button5" onclick="copyText(5)">Copy Text</button>
+
+    <div></div>
+
+    <input type="text" value="" id="input6" onkeyup='saveValue(this);'>
+    <button id="button6" onclick="copyText(6)">Copy Text</button>
+
+    <input type="text" value="" id="input7" onkeyup='saveValue(this);'>
+    <button id="button7" onclick="copyText(7)">Copy Text</button>
+
+    <div></div>
+
+    <input type="text" value="" id="input8" onkeyup='saveValue(this);'>
+    <button id="button8" onclick="copyText(8)">Copy Text</button>
 </body>
 
 <footer>
-    <script src="billingApp/js/main.js"></script>
+    <script src="billingAppFiles/js/main.js"></script>
 </footer>
 
 </html>
