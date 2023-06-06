@@ -9,45 +9,52 @@
     <title>Billing App</title>
 </head>
 <body>
-    <input type="text" value="" id="electric" placeholder="Electric" onkeyup='saveValue(this);' onfocus="this.value='', getCcpf(), saveValue(this);">
-    <input type="text" value="" id="propane" placeholder="Propane" onkeyup='saveValue(this);' onfocus="this.value='', getCcpf(), saveValue(this);">
+    <div class="ccpf">
+        <input type="text" value="" id="electric" placeholder="Electric" onkeyup='saveValue(this);' onfocus="this.value='', getCcpf(), saveValue(this);">
+        <input type="text" value="" id="propane" placeholder="Propane" onkeyup='saveValue(this);' onfocus="this.value='', getCcpf(), saveValue(this);">
+    
+        <div></div>
+    
+        <input type="text" value="" id="input0" readonly></input>
+        <button id="button0" onclick="copyText(0)">Copy Text</button>
+    </div>
 
-    <div></div>
+    <div class="description">
 
-    <input type="text" value="" id="input0" readonly></input>
-    <button id="button0" onclick="copyText(0)">Copy Text</button>
+        <input type="text" value="" id="input1" onkeyup='saveValue(this);'>
+        <div></div>
+        <button id="button1" onclick="copyText(1)">Copy Text</button>
 
-    <input type="text" value="" id="input1" onkeyup='saveValue(this);'>
-    <button id="button1" onclick="copyText(1)">Copy Text</button>
+        <input type="text" value="" id="input2" onkeyup='saveValue(this);'>
+        <div></div>
+        <button id="button2" onclick="copyText(2)">Copy Text</button>
 
-    <div></div>
+        <input type="text" value="" id="input3" onkeyup='saveValue(this);'>
+        <div></div>
+        <button id="button3" onclick="copyText(3)">Copy Text</button>
 
-    <input type="text" value="" id="input2" onkeyup='saveValue(this);'>
-    <button id="button2" onclick="copyText(2)">Copy Text</button>
+        <input type="text" value="" id="input4" onkeyup='saveValue(this);'>
+        <div></div>
+        <button id="button4" onclick="copyText(4)">Copy Text</button>
 
-    <input type="text" value="" id="input3" onkeyup='saveValue(this);'>
-    <button id="button3" onclick="copyText(3)">Copy Text</button>
+        <input type="text" value="" id="input5" onkeyup='saveValue(this);'>
+        <div></div>
+        <button id="button5" onclick="copyText(5)">Copy Text</button>
 
-    <div></div>
+        <input type="text" value="" id="input6" onkeyup='saveValue(this);'>
+        <div></div>
+        <button id="button6" onclick="copyText(6)">Copy Text</button>
 
-    <input type="text" value="" id="input4" onkeyup='saveValue(this);'>
-    <button id="button4" onclick="copyText(4)">Copy Text</button>
+        <input type="text" value="" id="input7" onkeyup='saveValue(this);'>
+        <div></div>
+        <button id="button7" onclick="copyText(7)">Copy Text</button>
 
-    <input type="text" value="" id="input5" onkeyup='saveValue(this);'>
-    <button id="button5" onclick="copyText(5)">Copy Text</button>
+        <input type="text" value="" id="input8" onkeyup='saveValue(this);'>
+        <div></div>
+        <button id="button8" onclick="copyText(8)">Copy Text</button>
 
-    <div></div>
+    </div>
 
-    <input type="text" value="" id="input6" onkeyup='saveValue(this);'>
-    <button id="button6" onclick="copyText(6)">Copy Text</button>
-
-    <input type="text" value="" id="input7" onkeyup='saveValue(this);'>
-    <button id="button7" onclick="copyText(7)">Copy Text</button>
-
-    <div></div>
-
-    <input type="text" value="" id="input8" onkeyup='saveValue(this);'>
-    <button id="button8" onclick="copyText(8)">Copy Text</button>
 </body>
 
 <footer>

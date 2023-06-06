@@ -6,19 +6,32 @@
     --font: 'Roboto Mono', monospace;
     --imgSize: 5vh;
 }
-
 body {
+    background-color: var(--background);
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.ccpf {
     display: grid;
     grid-template-columns: 24% 24% 4% 24% 24%;
+    grid-template-rows: 6vh;
+    gap: 35px 0px;
+    align-self: center;
+    margin: 5%;
+}
+
+.description {
+    display: grid;
+    grid-template-columns: 48% 4% 48%;
     grid-template-rows: repeat(8, 6vh);
     gap: 35px 0px;
-    background-color: var(--background);
     align-self: center;
     margin: 5%;
 }
 
 input, button {
-    font-size: 150%;
+    font-size: 120%;
 }
 
 
