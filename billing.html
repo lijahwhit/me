@@ -8,11 +8,11 @@
     <link rel="icon" type="image/x-icon" href="billingAppFiles/images/billingAppIcon.ico">
     <title>Billing App</title>
 </head>
-<body>
-    <div class="ccpf">
+<body >
+    <div class="ccpf" oncontextmenu="return false;">
         
-        <input type="text" value="" id="electric" placeholder="Electric" onkeyup='saveValue(this);' onfocus="this.value='', getCcpf(), saveValue(this);">
-        <input type="text" value="" id="propane" placeholder="Propane" onkeyup='saveValue(this);' onfocus="this.value='', getCcpf(), saveValue(this);">
+        <input type="text" value="" id="electric" placeholder="Electric" onkeyup='saveValue(this);' oncontextmenu="this.value='', getCcpf(), saveValue(this);">
+        <input type="text" value="" id="propane" placeholder="Propane" onkeyup='saveValue(this);' oncontextmenu="this.value='', getCcpf(), saveValue(this);">
     
         <div></div>
     
