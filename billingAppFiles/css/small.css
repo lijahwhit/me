@@ -9,7 +9,7 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr 1fr 50px 1fr 1fr;
+    grid-template-columns: 24% 24% 4% 24% 24%;
     grid-template-rows: repeat(8, 6vh);
     gap: 35px 0px;
     background-color: var(--background);
@@ -17,13 +17,11 @@ body {
     margin: 5%;
 }
 
-input {
+input, button {
     font-size: 150%;
 }
 
-button {
-    font-size: 150%;
-}
+
 
 #input0 {
     background-color: #000000;
