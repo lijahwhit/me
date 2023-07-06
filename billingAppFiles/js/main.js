@@ -67,28 +67,37 @@ function clearEP() {
   propane.value = "";
 }
 
-function preset(number) {
-  if (number === 1) {
-    console.log("Preset " + number)
-    var input1 = document.getElementById("input1")
-    input1.value = "CCPF ";
-    var input2 = document.getElementById("input2")
-    input2.value = "E5 + CCPF ";
-    var input3 = document.getElementById("input3")
-    input3.value = "June Rent ";
-    var input4 = document.getElementById("input4")
-    input4.value = "June Rent + E5 + CCPF ";
-    var input5 = document.getElementById("input5")
-    input5.value = "June Rent + E5 + P5a + CCPF  ";
-    var input6 = document.getElementById("input6")
-    input6.value = "P5,a,b + CCPF ";
-    var input7 = document.getElementById("input7")
-    input7.value = "Monthly Auto Billing";
-    var input8 = document.getElementById("input8")
-    input8.value = "While processing your credit card for auto billing this month, your card did not go through. On the 6th of each month, late charges are applied. Please contact us with a card with sufficient funds or let us know when the card on your paper credit card authorization form can be charged. ";
-    var input9 = document.getElementById("input9")
-    input9.value = "June Storage";
-    var input10 = document.getElementById("input10")
-    input10.value = "";
-  }
+function preset(month, number) {
+  console.log("Preset " + number)
+  var input1 = document.getElementById("input1")
+  input1.value = "CCPF ";
+  saveValue(input1);
+  var input2 = document.getElementById("input2")
+  input2.value = "E" + number + " + CCPF ";
+  saveValue(input2);
+  var input3 = document.getElementById("input3")
+  input3.value = month + " Rent ";
+  saveValue(input3);
+  var input4 = document.getElementById("input4")
+  input4.value = month + " Rent + E" + number + " + CCPF ";
+  saveValue(input4);
+  var input5 = document.getElementById("input5")
+  input5.value = month + " Rent + E" + number + " + P" + number + "a + CCPF  ";
+  saveValue(input5);
+  var input6 = document.getElementById("input6")
+  input6.value = "P" + number + ",a,b + CCPF ";
+  saveValue(input6);
+  var input7 = document.getElementById("input7")
+  input7.value = "Monthly Auto Billing";
+  saveValue(input7);
+  var input8 = document.getElementById("input8")
+  input8.value = "While processing your credit card for auto billing this month, your card did not go through. On the 6th of each month, late charges are applied. Please contact us with a card with sufficient funds or let us know when the card on your paper credit card authorization form can be charged. ";
+  saveValue(input8);
+  var input9 = document.getElementById("input9")
+  input9.value = month + " Storage";
+  saveValue(input9);
+  var input10 = document.getElementById("input10")
+  input10.value = "";
+  saveValue(input10);
+
 }
