@@ -11,6 +11,7 @@ document.getElementById("input7").value = getSavedValue("input7");
 document.getElementById("input8").value = getSavedValue("input8");
 document.getElementById("input9").value = getSavedValue("input9");
 document.getElementById("input10").value = getSavedValue("input10");
+document.getElementById("year").value = getSavedValue("year");
 getCcpf();
 
 function saveValue(e){
@@ -53,8 +54,8 @@ function getCcpf() {
   saveValue("input0")
 }
 
-function copyText(number) {
-  var copyText = document.getElementById("input" + number);
+function copyText(rent) {
+  var copyText = document.getElementById("input" + rent);
   copyText.select();
   navigator.clipboard.writeText(copyText.value);
   
@@ -67,25 +68,61 @@ function clearEP() {
   propane.value = "";
 }
 
-function preset(month, number) {
-  console.log("Preset " + number)
+function bill(month, electric, rent, cal) {
+  var year = document.getElementById("year").value;
+  console.log("Preset " + rent)
+  var input1 = document.getElementById("input1")
+  input1.value = "Rent " + rent + "/" + "1" + "/" + year + " - " + rent + "/" + cal + "/" + year;
+  saveValue(input1);
+  var input2 = document.getElementById("input2")
+  input2.value = "845";
+  saveValue(input2);
+  var input3 = document.getElementById("input3")
+  input3.value = "745";
+  saveValue(input3);
+  var input4 = document.getElementById("input4")
+  input4.value = "645";
+  saveValue(input4);
+  var input5 = document.getElementById("input5")
+  input5.value = "Flat Rate Electric E" + electric;
+  saveValue(input5);
+  var input6 = document.getElementById("input6")
+  input6.value = "100";
+  saveValue(input6);
+  var input7 = document.getElementById("input7")
+  input7.value = "60";
+  saveValue(input7);
+  var input8 = document.getElementById("input8")
+  input8.value = "Storage " + rent + "/" + "1" + "/" + year + " - " + rent + "/" + cal + "/" + year;
+  saveValue(input8);
+  var input9 = document.getElementById("input9")
+  input9.value = "100";
+  saveValue(input9);
+  var input10 = document.getElementById("input10")
+  input10.value = "75";
+  saveValue(input10);
+
+}
+
+function charge(month, rent) {
+  console.log("Preset " + rent)
   var input1 = document.getElementById("input1")
   input1.value = "CCPF ";
   saveValue(input1);
   var input2 = document.getElementById("input2")
-  input2.value = "E" + number + " + CCPF ";
+  input2.value = "E" + rent + " + CCPF ";
   saveValue(input2);
   var input3 = document.getElementById("input3")
   input3.value = month + " Rent ";
   saveValue(input3);
   var input4 = document.getElementById("input4")
-  input4.value = month + " Rent + E" + number + " + CCPF ";
+  input4.value = month + " Rent + E" + rent + " + CCPF ";
   saveValue(input4);
   var input5 = document.getElementById("input5")
-  input5.value = month + " Rent + E" + number + " + P" + number + "a + CCPF  ";
+  input5.value = month + " Rent + E" + rent + " + P" + rent + " + CCPF  ";
   saveValue(input5);
   var input6 = document.getElementById("input6")
-  input6.value = "P" + number + ",a,b + CCPF ";
+  input6.value = "P" + rent + ",a,b + CCPF ";
   saveValue(input6);
   var input7 = document.getElementById("input7")
   input7.value = "Monthly Auto Billing";

@@ -29,7 +29,12 @@ body {
     margin: 2vh 0px;
 }
 
-input, button {
+input {
+    font-size: 120%;
+    cursor: text;
+}
+
+button {
     font-size: 120%;
     cursor: pointer;
 }
@@ -40,6 +45,7 @@ input, button {
     color: #FFFFFF;
     font-size: 150%;
     text-align: center;
+    cursor: pointer;
 }
 
 .presets {
