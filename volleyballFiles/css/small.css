@@ -10,7 +10,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 6vh 94vh;
+    grid-template-rows: 10vh 90vh;
     background-color: var(--background);
     align-self: center;
     margin: 0;
@@ -158,10 +158,8 @@ h1 {
 h2 {
     font-size: 20px;
     margin-top: -20px;
-    position: fixed;
     margin: 0;
-    justify-self: right;
-    align-self: start;
+    text-align: right;
     cursor: pointer;
 }
 

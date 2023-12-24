@@ -12,7 +12,7 @@
     
     <img class="settingsIcon icon" src="volleyballFiles/images/settingsIcon.png" alt="settingsIcon" onclick="settingsToggle()">
     
-    <img class="adjustmentBtnsIcon icon" src="volleyballFiles/images/adjustmentBtnsOff.png" alt="adjustmentBtnsIcon" onclick="adustmentBtnsToggle()">
+    <!-- <img class="adjustmentBtnsIcon icon" src="volleyballFiles/images/adjustmentBtnsOff.png" alt="adjustmentBtnsIcon" onclick="adustmentBtnsToggle()"> -->
 
     <img class="notesIcon icon" src="volleyballFiles/images/notesIcon.png" alt="notesIcon" onclick='notesToggle()'>
 
@@ -30,7 +30,7 @@
         <p class="rightNumber"></p>
     </div>
 
-    <div class="leftAdjustments">
+    <!-- <div class="leftAdjustments">
         <p class="leftPlus adbox" onclick="leftScoreIncrease()"> + </p>
         <p class="leftMinus adbox" onclick="leftScoreDecrease()"> - </p>
     </div>
@@ -38,26 +38,31 @@
     <div class="rightAdjustments">
         <p class="rightPlus adbox" onclick="rightScoreIncrease()"> + </p>
         <p class="rightMinus adbox" onclick="rightScoreDecrease()"> - </p>
-    </div>
+    </div> -->
 
     <div class="settingsView">
         <div class="settingsContent">
-            <h2 onclick="settingsToggle()">X</h2>
-            <label for="backColor">Background Color</label>
-            <input type="color" id="backColor" value="#000000" onfocus="deApply()">
+            <label>Server Switch Key</label>
+            <h2 onclick="settingsToggle()">X</h2>     
+            <input type="submit" value="Off" id="serverSwitchBtn" onclick="serverSwitchBtn()"></input>             
+            <input type="text" id="SSKey" name="Server Switch" value="." onfocus="deApply(), this.value=''" >
+            <!-- <label for="backColor">Background Color</label> -->
+            <!-- <input type="color" id="backColor" value="#000000" onfocus="deApply()"> -->
+
+
             <!-- <label for="max">Max Count</label>
             <input type="text" id="max" name="Max Count" placeholder="99" onfocus="deApply(), this.value=''" > -->
             <input type="submit" value="Default" id="Default" onclick="preset()"></input> 
             <input type="submit" value="Preset 1" id="preset1" onclick="preset(1)"></input>
             <input type="submit" value="Preset 2" id="preset2" onclick="preset(2)"></input>
             <input type="submit" value="Preset 3" id="preset3" onclick="preset(3)"></input>
-            <label for="max">Left Key Increase</label>
+            <label>Left Key Increase</label>
             <input type="text" id="LIKey" name="Max Count" value="ArrowUp" onfocus="deApply(), this.value=''" >
-            <label for="max">Left Key Decrease</label>
+            <label>Left Key Decrease</label>
             <input type="text" id="LDKey" name="Max Count" value="ArrowDown" onfocus="deApply(), this.value=''" >
-            <label for="max">Right Key Increase</label>
+            <label>Right Key Increase</label>
             <input type="text" id="RIKey" name="Max Count" value="ArrowRight" onfocus="deApply(), this.value=''" >
-            <label for="max">Left Key Decrease</label>
+            <label>Left Key Decrease</label>
             <input type="text" id="RDKey" name="Max Count" value="ArrowLeft" onfocus="deApply(), this.value=''" >
             <input type="submit" value="Apply" id="applyBtn" onclick="apply()"></input>
             <input type="submit" value="Reset" id="resetBtn" onclick="reset()"></input>
