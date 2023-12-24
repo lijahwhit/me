@@ -305,7 +305,7 @@ function preset(number) {
             document.getElementById('LDKey').value = 4;
             document.getElementById('RIKey').value = 9;
             document.getElementById('RDKey').value = 6;          
-            document.getElementById('SSKey').value = 0;
+            document.getElementById('SSKey').value = '0';
             } else if (number === 3) {
                 document.getElementById('LIKey').value = 'w';
                 document.getElementById('LDKey').value = 's';
