@@ -168,10 +168,10 @@ h6 {
 }
 
 .card {
-    margin-bottom: 20px;
+    margin-bottom: 1vh;
     justify-self: center;
     align-self: center;
-    font-size: 35vw;
+    font-size: 65vh;
     cursor: pointer;
     display: grid;
     height: 100%;
