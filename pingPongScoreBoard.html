@@ -42,10 +42,10 @@
 
     <div class="settingsView">
         <div class="settingsContent">
-            <label>Server Switch Key</label>
+            <label>Server Start</label>
             <h2 onclick="settingsToggle()">X</h2>     
-            <input type="submit" value="Off" id="serverSwitchBtn" onclick="serverSwitchBtn()"></input>             
-            <input type="text" id="SSKey" name="Server Switch" value="." onfocus="deApply(), this.value=''" >
+            <input type="submit" value="Start Left" id="startLeftBtn" onclick="startServerBtn(0)"></input>
+            <input type="submit" value="Start Right" id="startRightBtn" onclick="startServerBtn(1)"></input>
             <!-- <label for="backColor">Background Color</label> -->
             <!-- <input type="color" id="backColor" value="#000000" onfocus="deApply()"> -->
 

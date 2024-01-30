@@ -14,8 +14,8 @@ let notesView = document.querySelector('.notesView');
 // let leftAdjustments = document.querySelector('.leftAdjustments');
 // let rightAdjustments = document.querySelector('.rightAdjustments');
 let iconsBtns = document.querySelector('.iconsBtnsToggle');
-let SSBtn = document.querySelector('#serverSwitchBtn');
-
+let SLBtn = document.querySelector('#startLeftBtn');
+let SRBtn = document.querySelector('#startRightBtn');
 leftNumber.innerText = 0;
 rightNumber.innerText = 0;
 
@@ -34,9 +34,7 @@ let LIKeyV = 'ArrowUp';
 let LDKeyV = 'ArrowDown';
 let RIKeyV = 'ArrowRight';
 let RDKeyV = 'ArrowLeft';
-let SSKeyV = "."
-let SSBtnV = 0
-let S = 0
+
 
 function leftScoreIncrease() {
     if(a < max){
@@ -84,9 +82,7 @@ window.addEventListener('keydown', (event) => {
                     rightScoreIncrease();
                 }   else if (event.key === RDKeyV) {
                         rightScoreDecrease();
-                    }  else if (SSBtnV === 1 && event.key === SSKeyV) {
-                            switchServer();
-                    }
+                    };
     }
 
 });
@@ -254,16 +250,11 @@ function keyAssignment() {
     let LDKey = document.getElementById('LDKey').value;
     let RIKey = document.getElementById('RIKey').value;
     let RDKey = document.getElementById('RDKey').value;
-    let SSKey = document.getElementById('SSKey').value;
-
-
     LIKeyV = LIKey;
     LDKeyV = LDKey;
     RIKeyV = RIKey;
     RDKeyV = RDKey;
-    SSKeyV = SSKey;
-    
-}
+};
  
 function apply() {
     // maxCount()
@@ -286,6 +277,10 @@ function reset() {
     b = 0;
     resetBtn.style.backgroundColor = "green";
     resetBtn.value = "DONE";
+    leftNumber.style.color = "white"
+    rightNumber.style.color = "white"
+    SLBtn.style.backgroundColor = "black";
+    SRBtn.style.backgroundColor = "black";
 }
 
 function deReset() {
@@ -304,8 +299,7 @@ function preset(number) {
             document.getElementById('LIKey').value = 7;
             document.getElementById('LDKey').value = 4;
             document.getElementById('RIKey').value = 9;
-            document.getElementById('RDKey').value = 6;          
-            document.getElementById('SSKey').value = 0;
+            document.getElementById('RDKey').value = 6;
             } else if (number === 3) {
                 document.getElementById('LIKey').value = 'w';
                 document.getElementById('LDKey').value = 's';
@@ -333,29 +327,15 @@ function iconsBtnsToggle() {
     // adjustmentBtnsIcon.classList.toggle('off');
 }
 
-function serverSwitchBtn() {
-
-    if (SSBtnV === 0) {
-        SSBtnV = 1
-        SSBtn.style.backgroundColor = "green";
-        SSBtn.value = "On";
-    } else {
-            SSBtnV = 0
-            SSBtn.style.backgroundColor = "black";
-            SSBtn.value = "Off";
-            rightNumber.style.color = "white"      
-            leftNumber.style.color = "white"
-        }      
-        console.log(SSBtn.value)
-}
-
-function switchServer() {
-    if (S === 0) {
-        S = 1
+function startServerBtn(button) {
+    if (button === 1) {
+        SLBtn.style.backgroundColor = "black";
+        SRBtn.style.backgroundColor = "green";
         rightNumber.style.color = "green"
         leftNumber.style.color = "white"
-    } else {
-        S = 0
+    } else if (button === 0) {
+        SLBtn.style.backgroundColor = "green";
+        SRBtn.style.backgroundColor = "black";
         rightNumber.style.color = "white"
         leftNumber.style.color = "green"
     }
