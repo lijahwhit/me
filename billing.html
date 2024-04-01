@@ -16,9 +16,12 @@
         
         <input type="text" value="" id="electric" placeholder="Electric" onkeyup='saveValue(this);' oncontextmenu="this.value='', getCcpf(), saveValue(this);">
         <input type="text" value="" id="propane" placeholder="Propane" onkeyup='saveValue(this);' oncontextmenu="this.value='', getCcpf(), saveValue(this);">
+        <input type="text" value="" id="propaneA" placeholder="PropaneA" onkeyup='saveValue(this);' oncontextmenu="this.value='', getCcpf(), saveValue(this);">
+        <input type="text" value="" id="propaneB" placeholder="PropaneB" onkeyup='saveValue(this);' oncontextmenu="this.value='', getCcpf(), saveValue(this);">
     
         <div></div>
     
+        <button id="button0" onclick="navigator.clipboard.writeText(0)">Copy "0"</button>
         <input type="text" value="" id="input0" readonly></input>
         <button id="button0" onclick="copyText(0)">Copy Text</button>
     </div>

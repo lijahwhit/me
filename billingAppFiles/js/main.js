@@ -1,5 +1,7 @@
 document.getElementById("electric").value = getSavedValue("electric");
 document.getElementById("propane").value = getSavedValue("propane");
+document.getElementById("propaneA").value = getSavedValue("propaneA");
+document.getElementById("propaneB").value = getSavedValue("propaneB");
 document.getElementById("input0").value = getSavedValue("input0");
 document.getElementById("input1").value = getSavedValue("input1");
 document.getElementById("input2").value = getSavedValue("input2");
@@ -29,28 +31,29 @@ function getSavedValue  (v){
 
 electric.addEventListener("input", getCcpf);
 propane.addEventListener("input", getCcpf);
+propaneA.addEventListener("input", getCcpf);
+propaneB.addEventListener("input", getCcpf);
 
 function getCcpf() {
   var electric = document.getElementById("electric").value;
   var propane = document.getElementById("propane").value;
+  var propaneA = document.getElementById("propaneA").value;
+  var propaneB = document.getElementById("propaneB").value;
   var ccpf = document.getElementById("input0");
   var e = parseInt(electric)
   var p = parseInt(propane)
-  if (electric === "" && propane === "") {
+  var pA = parseInt(propaneA)
+  var pB = parseInt(propaneB)
+
+  var sum = e + p + pA + pB
+
+  if (sum === 0) {
     ccpf.value = "0.00"
-  } else if (propane === "") {
-      var y = e * 0.025;
+  } else {
+      var y = sum * 0.025;
       var x = Math.round(100*y)/100;
       ccpf.value = x;
-    } else if (electric === "") {
-      var y = p * 0.025;
-      var x = Math.round(100*y)/100;
-      ccpf.value = x;
-      } else {
-        var y = (e += p) * 0.025;
-        var x = Math.round(100*y)/100;
-        ccpf.value = x;
-  }
+    }
   saveValue("input0")
 }
 
