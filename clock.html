@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="HandheldFriendly" content="true">
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="clockFiles/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="clockFiles/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="clockFiles/images/favicon-16x16.png"> -->
     <title>Clock</title>
     <style>
         body, html {
@@ -22,6 +19,14 @@
         #datetime {
             font-size: 25vw;
         }
+        .blink {
+            animation: blinker 1s step-start infinite;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
         @media (min-width: 600px) {
             #datetime {
                 font-size: 25vw;
@@ -29,7 +34,7 @@
         }
     </style>
 </head>
-<body >
+<body>
     <span id="datetime"></span>
 
     <script>
@@ -39,23 +44,19 @@
             const minutes = now.getMinutes().toString().padStart(2, '0');
             hours = hours % 12;
             hours = hours ? hours : 12; // the hour '0' should be '12'
-            return `${hours}:${minutes}`;
+            return `${hours}<span class="blink">:</span>${minutes}`;
         }
 
         function updateTime() {
-            document.getElementById('datetime').textContent = getCurrentTime();
+            document.getElementById('datetime').innerHTML = getCurrentTime();
         }
 
         // Update the time immediately when the page loads
         updateTime();
 
         // Update the time every second
-        setInterval(updateTime, 500);
+        setInterval(updateTime, 1000);
     </script>
 </body>
-
-<footer>
-    <script src="clockFiles/js/main.js"></script>
-</footer>
 
 </html>
