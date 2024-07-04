@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="clockFiles/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="clockFiles/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="clockFiles/images/favicon-16x16.png"> -->
+    <title>Clock</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        #datetime {
+            font-size: 10em;
+        }
+    </style>
+</head>
+<body >
+    <span id="datetime"></span>
+
+    <script>
+        function getCurrentTime() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            const hoursStr = hours.toString().padStart(2, '0');
+            return `${hoursStr}:${minutes}:${seconds} ${ampm}`;
+        }
+
+        function updateTime() {
+            document.getElementById('datetime').textContent = getCurrentTime();
+        }
+
+        // Update the time immediately when the page loads
+        updateTime();
+
+        // Update the time every second
+        setInterval(updateTime, 500);
+    </script>
+</body>
+
+<footer>
+    <script src="clockFiles/js/main.js"></script>
+</footer>
+
+</html>
