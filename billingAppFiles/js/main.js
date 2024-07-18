@@ -162,7 +162,7 @@ function copyText(x) {
   var copyText = document.getElementById("input" + x);
   copyText.select();
   navigator.clipboard.writeText(copyText.value);
-  }
+  };
 
   document.addEventListener('DOMContentLoaded', function() {
     // Restore styles for buttons
