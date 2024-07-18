@@ -12,16 +12,45 @@
     <title>Billing App</title>
 </head>
 <body >
+    <div class="selectors">
+        <select id="monthSelect" onchange="updateYear(),updateMonth(),getMonthNumber(),chargeOrBill(),saveValue(this)">
+            <option value="">Select Month</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+    
+        <select id="yearSelect" onchange="updateYear(), updateMonth(), getMonthNumber(), chargeOrBill(), saveValue(this)">
+            <option value="">Select Year</option>
+        </select>
+
+        <button id="billingCardButton" onclick="toggleButtonStyle('billingCard'),bill(),getMonthNumber();">Billing Card</button>
+        <button id="addChargesButton" onclick="toggleButtonStyle('addCharges'),charge(),getMonthNumber();">Add Charges</button>
+
+    </div>
+
     <div class="ccpf" oncontextmenu="return false;">
         
-        <input type="text" value="" id="electric" placeholder="Electric" onclick="this.value='0', getCcpf(), saveValue(this);" onkeyup='saveValue(this);' oncontextmenu="this.value='', getCcpf(), saveValue(this);">
-        <input type="text" value="" id="propane" placeholder="Propane" onclick="this.value='0', getCcpf(), saveValue(this);" onkeyup='saveValue(this);' oncontextmenu="this.value='', getCcpf(), saveValue(this);">
-        <input type="text" value="" id="propaneA" placeholder="PropaneA" onclick="this.value='0', getCcpf(), saveValue(this);" onkeyup='saveValue(this);' oncontextmenu="this.value='', getCcpf(), saveValue(this);">
-        <input type="text" value="" id="propaneB" placeholder="PropaneB" onclick="this.value='0', getCcpf(), saveValue(this);" onkeyup='saveValue(this);' oncontextmenu="this.value='', getCcpf(), saveValue(this);">
+        <div class="preccpf">$</div>
+        <input type="text" value="" id="electric" placeholder="Electric" onclick="getCcpf(), saveValue(this);" onkeyup='saveValue(this);' oncontextmenu="this.value='', getCcpf(), saveValue(this);">
+        <div class="preccpf">$</div>
+        <input type="text" value="" id="propane" placeholder="Propane" onclick="getCcpf(), saveValue(this);" onkeyup='saveValue(this);' oncontextmenu="this.value='', getCcpf(), saveValue(this);">
+        <div class="preccpf">$</div>
+        <input type="text" value="" id="propaneA" placeholder="PropaneA" onclick="getCcpf(), saveValue(this);" onkeyup='saveValue(this);' oncontextmenu="this.value='', getCcpf(), saveValue(this);">
+        <div class="preccpf">$</div>
+        <input type="text" value="" id="propaneB" placeholder="PropaneB" onclick="getCcpf(), saveValue(this);" onkeyup='saveValue(this);' oncontextmenu="this.value='', getCcpf(), saveValue(this);">
     
         <div></div>
     
-        <button id="button0" onclick="navigator.clipboard.writeText(0)">Copy "0"</button>
         <input type="text" value="" id="input0" readonly></input>
         <button id="button0" onclick="copyText(0)">Copy Text</button>
     </div>
@@ -70,27 +99,10 @@
 
     </div>
 
-    <!-- <div class="presetOptions">
-        <input type="text" value="" id="month" onkeyup="saveValue(this);">
-        <div></div>
-        <h1>Month</h1>
-        <div></div>
-        <input type="text" value="" id="billCharge" onkeyup="saveValue(this);">
-        <div></div>
-        <h1>Bill or Charge</h1>
-        <div></div>
-        <button id="presetOptionsApply" onclick="presetOptions()">Apply</button>
-
-    </div> -->
-
-    <div class="year">
-        <input id="year" type="text" onkeyup="saveValue(this);">
-    </div>
-
-    <div class="presets">
+    <!-- <div class="presets">
         <!-- charge(month, rent) -->
         <!-- bill(month, electric, rent, cal) -->
-        <button id="preset" onclick="charge('January', 12)">January Charge</button>
+        <!-- <button id="preset" onclick="charge('January', 12)">January Charge</button>
         <div></div>
         <button id="preset" onclick="bill('January', 12, 1, 31)">January Bill</button>
         <button id="preset" onclick="charge('February', 1)">February Charge</button>
@@ -126,7 +138,7 @@
         <button id="preset" onclick="charge('December', 11)">December Charge</button>
         <div></div>
         <button id="preset" onclick="bill('December', 11, 12, 31)">December Bill</button>
-    </div>
+    </div> -->
 
 </body>
 
