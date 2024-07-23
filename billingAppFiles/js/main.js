@@ -269,7 +269,7 @@ function charge() {
   input4.value = "645";
   saveValue(input4);
   var input5 = document.getElementById("input5")
-  input5.value = "Flat Rate Electric E" + (monthNumber-1);
+  input5.value = "Flat Rate E" + (monthNumber-1);
   saveValue(input5);
   var input6 = document.getElementById("input6")
   input6.value = "100";
