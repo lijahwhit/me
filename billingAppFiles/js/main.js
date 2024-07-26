@@ -152,7 +152,7 @@ function getCcpf() {
   var ccpfValue = (sum === 0) ? 0.00 : Math.round(100 * sum * 0.025) / 100;
 
   // Update the input field with the calculated value prefixed by a $
-  ccpf.value = "$" + ccpfValue.toFixed(2);
+  ccpf.value = ccpfValue.toFixed(2);
 
   // Call the saveValue function
   saveValue("input0");
