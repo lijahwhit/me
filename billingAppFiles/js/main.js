@@ -241,7 +241,7 @@ function bill() {
   input7.value = "Monthly Auto Billing";
   saveValue(input7);
   var input8 = document.getElementById("input8")
-  input8.value = "While processing your credit card for auto billing this month, your card did not go through. On the 6th of each month, late charges are applied. Please contact us with a card with sufficient funds or let us know when the card on your paper credit card authorization form can be charged. The card in question is a Visa Mastercard ending in ####. ";
+  input8.value = "While processing your credit card for auto billing this month, your card did not go through. On the 6th of each month, late charges are applied. Please contact us with a card with sufficient funds or let us know when the card on your paper credit card authorization form can be charged. The card in question is a Visa Mastercard ending in #. ";
   saveValue(input8);
   var input9 = document.getElementById("input9")
   input9.value = monthSelect + " Storage";
